@@ -1,0 +1,27 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'com.example'
+version = '1.0'
+
+description = """"""
+
+sourceCompatibility = 1.5
+targetCompatibility = 1.5
+tasks.withType(JavaCompile) {
+	options.encoding = 'UTF-8'
+}
+
+
+
+repositories {
+        
+     maven { url "http://repo.maven.apache.org/maven2" }
+}
+dependencies {
+    compile group: 'org.robotframework', name: 'javalib-core', version:'0.9.1'
+    compile group: 'com.github.ombre42', name: 'jrobotremoteserver', version:'2.0-BETA'
+    compile group: 'commons-io', name: 'commons-io', version:'2.3'
+    testCompile group: 'org.robotframework', name: 'robotframework', version:'2.7.0'
+    testCompile group: 'org.testng', name: 'testng', version:'6.3.1'
+}
