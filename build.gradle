@@ -14,7 +14,7 @@ tasks.withType(JavaCompile) {
 }
 
 configurations.all {
-    // transitive = false
+    
 }
 
 repositories {
